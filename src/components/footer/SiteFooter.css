@@ -1,0 +1,21 @@
+.layout {
+    background-color: #001529 !important;
+}
+
+.container-footer {
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.icon-content {
+    height: 2rem;
+    margin: 0 0.4rem;
+  }
+
+  .contato-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }

@@ -1,0 +1,102 @@
+
+/* APRESENTAÇÃO  */
+.main-content-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    justify-content: center;
+    padding-top: 3rem;
+    /* background-color: aquamarine !important; */
+}
+
+/* .foto-apretentacao-container {
+} */
+
+.foto-apresentação {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.text-apresentacao-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* QUEM SOU? */
+
+.quemSou-content {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    text-align: center;
+    justify-content: center;
+    /* background-color: aquamarine !important; */
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+
+}
+.titulo-quemSou {
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.texto-quemSou {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: cadetblue; */
+    padding: 2rem 4rem;
+
+}
+
+p {
+    text-align: left;
+    text-indent: 1.5em;
+    margin-bottom: 1.5em;
+    line-height: 1.5;
+    font-size: 1rem;
+  } 
+
+.img-quemSou {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: pink; */
+}
+
+
+/* CATALOGOS  */
+
+.catalogo-container {
+    height: 90%;
+    /* background-color: aquamarine; */
+    font-family: 'Raleway', sans-serif;
+}
+
+.titulo-catalogo {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.catalogo-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    justify-content: center;
+    /* background-color: green; */
+    height: 50%;
+}
+
+.catalogo-item-content {
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
