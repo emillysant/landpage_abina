@@ -1,0 +1,75 @@
+/* Estilos para garantir uma altura mínima de tela inteira */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Define uma altura mínima de 100% da altura da viewport */
+  }
+  
+  .Header {
+    max-height: 100px; /* Defina a altura mínima desejada para o Header */
+  }
+  
+  .Main {
+    flex-grow: 1; /* Faz com que o Main ocupe o espaço disponível restante */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 10rem;
+    font-family: 'Raleway', sans-serif;
+
+    position: fixed;
+    bottom: 45%;
+    right: 0px;
+    transform: translateY(50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+  }
+  
+  .Footer {
+    min-height: 50px; /* Defina a altura mínima desejada para o Footer */
+  }
+
+  .img-left-side {
+    flex-grow: 1;
+    max-width: 50vw;
+    max-height: fit-content;
+  }
+
+  .whatsapp-button {
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .whatsapp-button:hover {
+    opacity: 1;
+  }
+
+  .whatsapp-text {
+    font-size: 14px;
+    margin-bottom: 2rem;
+  }
