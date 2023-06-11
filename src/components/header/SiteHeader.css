@@ -11,3 +11,17 @@
 .menu {
     margin-right: 20px;
 }
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 480px) {
+  .container-header {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+}
