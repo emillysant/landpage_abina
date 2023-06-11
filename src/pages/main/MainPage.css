@@ -100,3 +100,39 @@ p {
     align-items: center;
     justify-content: center;
 }
+
+.abinaCorrendo {
+    max-width: 400px;
+}
+
+@media (max-width: 480px) {
+ 
+    .main-content-page {
+        grid-template-columns: 1fr;
+    }
+
+    .quemSou-content {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-quemSou {
+        margin-bottom: 2rem;
+    }
+
+    /* .texto-quemSou {
+        padding: 1rem;
+    } */
+
+    .catalogo-container {
+        margin-top: 250px;
+    }
+
+    .catalogo-content {
+        grid-template-columns: 1fr;
+    }
+
+    .catalogo-item-content {
+        margin: 1rem 0px;
+    }
+
+  }

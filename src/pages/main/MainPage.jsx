@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import SiteHeader from '../../components/header/SiteHeader';
 import SiteFooter from '../../components/footer/SiteFooter';
+import { useLocation } from 'react-router-dom';
 
 import './MainPage.css';
 import { Breadcrumb, Layout, theme } from 'antd';
@@ -23,6 +24,20 @@ function MainPage() {
   const VitoriaPDF = 'colchoes_victoria.pdf'
 
   const { token: { colorBgContainer }, } = theme.useToken();
+  const catalogosRef = useRef(null);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // Verifica se há um hash na URL para rolar até a seção de catálogos
+    const hash = location.hash.slice(1);
+    if (hash) {
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   return (
     <div style={{ fontFamily: 'Raleway, sans-serif' }}>
@@ -39,8 +54,8 @@ function MainPage() {
               </div>
               <div className='text-apresentacao-container'>
                 <div> 
-                  <h1 style={{fontWeight: 'bolder'}}>Representante Comercial</h1>
-                  <h3 style={{fontWeight: 'bolder'}}>Setor Moveleiro</h3>
+                  <h1 style={{fontWeight: 'bolder', marginTop: '2rem'}}>Representante Comercial de Indústrias de Móveis</h1>
+                  {/* <h3 style={{fontWeight: 'bolder'}}></h3> */}
                 </div>
               </div>
             </div>
@@ -64,16 +79,16 @@ function MainPage() {
                 </p>
               </div>
               <div className='img-quemSou'>
-                  <img src={abnadabCorrendo} width={'400px'} alt='foto_abina'/>
+                  <img src={abnadabCorrendo} alt='foto_abina' className='abinaCorrendo' />
               </div>
             </div>
           </section>
           {/* CATALOGOS */}
-          <section  style={{ background: colorBgContainer, height: '90vh'}}>
+          <section  style={{ background: colorBgContainer, height: '90vh'}} ref={catalogosRef} id="catalogos">
             <div className='catalogo-container'>
               <div className='titulo-catalogo'>
                 <h1 style={{fontWeight: 'bolder'}}>Catálogos dos Produtos</h1>
-                <h3>Click em uma das empresas para fazer o download do catálogo atualizado</h3>
+                <h3>Selecione uma das empresas para fazer o download do catálogo atualizado</h3>
               </div>
               <div className="catalogo-content">
                 <div className='catalogo-item-content'>
